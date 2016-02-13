@@ -1,0 +1,7 @@
+=link_to 'new post', new_admin_post_path
+%ol
+  -@posts.each do |post|
+    %li=link_to post.post_title, edit_admin_post_path(post)
+
+=paginate @posts
+

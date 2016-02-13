@@ -1,0 +1,6 @@
+- if @post.valid?
+  :plain
+    Turbolinks.visit("#{edit_admin_post_path(@post)}");
+- else
+  :plain
+    $(".post-edit-errors").html("#{escape_javascript(render('errors'))}");

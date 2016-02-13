@@ -1,0 +1,21 @@
+!!! 5
+%head
+  %title App
+  =stylesheet_link_tag "admin/application", media: 'all', 'data-turbolinks-track' => true
+  =javascript_include_tag "admin/application", 'data-turbolinks-track' => true
+
+%body
+  .container-fluid
+    #wrapper
+      #sidebar-wrapper
+        %ul.sidebar-nav
+          %li.sidebar-brand
+            =link_to 'back to site', root_path
+          %li
+            =link_to 'Posts', admin_posts_path
+
+      #page-content-wrapper
+        .container-fluid
+          .row
+            .col-lg-12
+              =yield

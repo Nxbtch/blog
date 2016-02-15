@@ -38,6 +38,11 @@ gem 'settingslogic'
 # editor
 gem 'codemirror-rails'
 
+# fake data
+gem 'ffaker', require: false
+gem 'faker', require: false
+gem 'useragents', require: false
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry-rails'

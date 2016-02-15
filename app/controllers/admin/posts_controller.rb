@@ -2,7 +2,11 @@ class Admin::PostsController < Admin::ApplicationController
   before_action :find_post, only: [:edit, :update, :destroy]
 
   def index
-    @posts = Post.page params[:page]
+    limit = params[:limit] || Settings.pagination.admin_posts
+    offset = params[:offset] || 0
+    order = params[:order] || :asc
+    order_column = params[:sort] || :id
+    @posts = Post.order("#{order_column} #{order}").limit(limit).offset(offset)
   end
 
   def new

@@ -1,1 +1,9 @@
+-@posts.each do |post|
+  -cache post do
+    %h3= post.post_title
+    %p
+      != post.post_content
+    = link_to 'detail', post_path(post), class: 'btn btn-default'
 
+
+=paginate @posts

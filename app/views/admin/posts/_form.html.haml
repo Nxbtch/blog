@@ -1,10 +1,10 @@
-=form_for [:admin, @post], remote: true do |f|
-  =f.text_field :post_title
+=simple_form_for [:admin, @post], remote: true do |f|
+  =f.input :post_title
 
-  =f.text_area :post_markdown, class: 'codemirror-editor'
+  =f.text_field :post_markdown, class: 'codemirror-editor'
 
-  =f.date_select :post_date
+  =f.input :post_date, as: :date
 
-  =f.select :post_status, options_for_select(['publish', 'draft', 'lock'])
+  =f.input :post_status, collection: ['publish', 'draft', 'lock'], include_blank: false
 
-  =f.submit
+  =f.button :submit

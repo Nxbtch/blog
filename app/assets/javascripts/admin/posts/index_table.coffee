@@ -1,5 +1,14 @@
 page_load = ->
   return unless $('table.post-index')
+
+  operateFormatter = (value, row, idx)->
+    [
+      '<a href="/admin/posts/'+row.id+'/edit" target="_blank">',
+      'edit',
+      '</a>'
+    ].join('')
+
+
   table = $('table.post-index')
   table.bootstrapTable
     serach: true
@@ -12,6 +21,15 @@ page_load = ->
     ,
       field: 'post_title'
       title: 'Title'
+    ,
+      field: 'post_status'
+      title: 'status'
+    ,
+      field: 'comment_count'
+      title: 'Comments'
+    ,
+      title: 'Operation'
+      formatter: operateFormatter
     ]
 
 $(document).on('turbolinks:load', page_load)

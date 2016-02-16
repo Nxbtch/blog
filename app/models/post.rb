@@ -1,3 +1,4 @@
+require 'markdown'
 class Post < ActiveRecord::Base
   paginates_per Settings.pagination.admin_posts
 
@@ -5,4 +6,12 @@ class Post < ActiveRecord::Base
 
   has_many :comments, dependent: :destroy
 
+  before_validation :convert_markdown
+
+  private
+
+  def convert_markdown
+    return unless self.post_markdown_changed?
+    self.post_content = MarkdownConverter.parse(self.post_markdown)
+  end
 end

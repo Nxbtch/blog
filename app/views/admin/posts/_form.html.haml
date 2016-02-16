@@ -1,7 +1,7 @@
 =form_for [:admin, @post], remote: true do |f|
   =f.text_field :post_title
 
-  =f.text_area :post_content, class: 'codemirror-editor'
+  =f.text_area :post_markdown, class: 'codemirror-editor'
 
   =f.date_select :post_date
 

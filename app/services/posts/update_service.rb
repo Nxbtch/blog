@@ -1,3 +1,5 @@
+require 'markdown'
+
 module Posts
   class UpdateService < BaseService
 
@@ -10,7 +12,6 @@ module Posts
 
     def execute
       @post.update!(params)
-
       true
     rescue => e
       message = "Unable to update post #{e.message}"

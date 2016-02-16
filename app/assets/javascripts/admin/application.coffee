@@ -3,7 +3,9 @@
 #= require jquery_ujs
 #= require turbolinks
 #= require codemirror
-#
+#= require codemirror/modes/markdown
+#= require codemirror/modes/gfm
+#= require codemirror/addons/mode/overlay
 #
 #require plugins
 #

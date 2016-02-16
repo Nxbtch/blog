@@ -44,10 +44,14 @@ class Admin::PostsController < Admin::ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:post_title, :post_content,
-                                 :post_date, :post_password,
-                                 :post_status, :post_name,
-                                 :post_parent, :comment_status
+    params.require(:post).permit(:post_title,
+                                 :post_markdown,
+                                 :post_date,
+                                 :post_password,
+                                 :post_status,
+                                 :post_name,
+                                 :post_parent,
+                                 :comment_status
                                 )
   end
 end

@@ -38,6 +38,9 @@ Rails.application.configure do
 
   config.web_console.whiny_requests = false
 
+  # set session store
+  config.cache_store = :redis_store, "redis://localhost:6370/0/cache"
+
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end

@@ -2,9 +2,9 @@
 
 if Rails.env.production?
   Rails.application.config.session_store :redis_store, servers: {
-    host: ENV["REDIS_HOST"],
-    port: ENV["REDIS_PORT"],
-    db: ENV["REDIS_PORT"] || 0,
+    host: ENV["REDIS_PORT_6379_TCP_ADDR"],
+    port: ENV["REDIS_PORT_6379_TCP_PORT"],
+    db: ENV["REDIS_DB"] || 0,
     namespace: ENV["REDIS_NAMESPACE"] || "session",
     password: ENV["REDIS_PASSWORD"]
   }

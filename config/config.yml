@@ -1,0 +1,7 @@
+development: &default
+    admin_email: me@hechen0.com
+    pagination:
+        admin_posts: 10
+
+production:
+    <<: *default

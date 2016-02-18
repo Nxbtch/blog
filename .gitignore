@@ -6,9 +6,6 @@
 
 # Ignore bundler config.
 /.bundle
-config.yml
-secrets.yml
-database.yml
 *.swp
 
 # Ignore all logfiles and tempfiles.

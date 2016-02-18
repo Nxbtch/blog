@@ -3,6 +3,7 @@
   %title App
   =stylesheet_link_tag "admin/application", media: 'all', 'data-turbolinks-track' => true
   =javascript_include_tag "admin/application", 'data-turbolinks-track' => true
+  =csrf_meta_tag
 
 %body
   .container-fluid
@@ -13,6 +14,10 @@
             =link_to 'back to site', root_path
           %li
             =link_to 'Posts', admin_posts_path
+          - if user_signed_in?
+            %li
+              =link_to 'Logout', destroy_user_session_path, method: :delete
+
 
       #page-content-wrapper
         .container-fluid

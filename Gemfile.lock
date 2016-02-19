@@ -155,6 +155,9 @@ GEM
     rails_12factor (0.0.3)
       rails_serve_static_assets
       rails_stdout_logging
+    rails_migrate_mutex (1.1.1)
+      railties
+      redis-mutex
     rails_serve_static_assets (0.0.5)
     rails_stdout_logging (0.0.4)
     railties (4.2.5.1)
@@ -166,6 +169,13 @@ GEM
     rdoc (4.2.2)
       json (~> 1.4)
     redcarpet (3.3.4)
+    redis (3.2.2)
+    redis-classy (2.2.0)
+      redis-namespace (~> 1.0)
+    redis-mutex (4.0.0)
+      redis-classy (~> 2.0)
+    redis-namespace (1.5.2)
+      redis (~> 3.0, >= 3.0.4)
     responders (2.1.1)
       railties (>= 4.2.0, < 5.1)
     rspec (3.4.0)
@@ -260,6 +270,7 @@ DEPENDENCIES
   rack-timeout
   rails (= 4.2.5.1)
   rails_12factor
+  rails_migrate_mutex
   redcarpet
   rspec
   rspec-rails

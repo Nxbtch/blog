@@ -38,6 +38,9 @@ gem 'settingslogic'
 # editor
 gem 'codemirror-rails'
 
+# rails migrations
+gem 'rails_migrate_mutex'
+
 # fake data
 gem 'ffaker', require: false
 gem 'faker', require: false

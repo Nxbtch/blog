@@ -1,3 +1,3 @@
 FROM ad2games/docker-rails:2.0.1
 
-RUN bash -ec "chpst -u app RAILS_ENV=production bundle exec rake db:migrate SECRET_KEY_BASE=noop"
+COPY db_migrate.sh /etc/my_init.d/90_db_migrate.sh

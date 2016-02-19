@@ -170,28 +170,12 @@ GEM
       json (~> 1.4)
     redcarpet (3.3.4)
     redis (3.2.2)
-    redis-actionpack (4.0.1)
-      actionpack (~> 4)
-      redis-rack (~> 1.5.0)
-      redis-store (~> 1.1.0)
-    redis-activesupport (4.1.5)
-      activesupport (>= 3, < 5)
-      redis-store (~> 1.1.0)
     redis-classy (2.2.0)
       redis-namespace (~> 1.0)
     redis-mutex (4.0.0)
       redis-classy (~> 2.0)
     redis-namespace (1.5.2)
       redis (~> 3.0, >= 3.0.4)
-    redis-rack (1.5.0)
-      rack (~> 1.5)
-      redis-store (~> 1.1.0)
-    redis-rails (4.0.0)
-      redis-actionpack (~> 4)
-      redis-activesupport (~> 4)
-      redis-store (~> 1.1.0)
-    redis-store (1.1.7)
-      redis (>= 2.2)
     responders (2.1.1)
       railties (>= 4.2.0, < 5.1)
     rspec (3.4.0)
@@ -288,7 +272,6 @@ DEPENDENCIES
   rails_12factor
   rails_migrate_mutex
   redcarpet
-  redis-rails
   rspec
   rspec-rails
   sass-rails (~> 5.0)

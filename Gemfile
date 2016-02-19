@@ -39,7 +39,7 @@ gem 'settingslogic'
 gem 'codemirror-rails'
 
 # rails migrations
-gem 'rails_migrate_mutex', group: :production
+gem 'rails_migrate_mutex'
 
 # fake data
 gem 'ffaker', require: false
@@ -54,9 +54,6 @@ gem 'devise'
 
 # simpleform
 gem 'simple_form'
-
-# cache store
-gem 'redis-rails'
 
 # app server
 gem 'puma'

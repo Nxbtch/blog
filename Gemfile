@@ -39,7 +39,7 @@ gem 'settingslogic'
 gem 'codemirror-rails'
 
 # rails migrations
-gem 'rails_migrate_mutex'
+gem 'rails_migrate_mutex', group: :production
 
 # fake data
 gem 'ffaker', require: false

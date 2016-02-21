@@ -30,6 +30,8 @@ gem 'haml-rails'
 # pagination
 gem 'kaminari'
 
+# deploy
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # settings
@@ -37,9 +39,6 @@ gem 'settingslogic'
 
 # editor
 gem 'codemirror-rails'
-
-# rails migrations
-gem 'rails_migrate_mutex'
 
 # fake data
 gem 'ffaker', require: false
@@ -58,9 +57,6 @@ gem 'simple_form'
 # app server
 gem 'puma'
 
-gem 'rack-timeout', group: :production
-gem 'rails_12factor', group: :production
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry-rails'
@@ -73,6 +69,8 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
+
+  gem 'capistrano-rails'
   gem 'web-console', '~> 2.0'
   gem 'quiet_assets'
 

@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'https://ruby.taobao.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
@@ -73,6 +73,7 @@ group :development do
   gem 'capistrano-rails'
   gem 'web-console', '~> 2.0'
   gem 'quiet_assets'
+  gem 'capistrano3-puma'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'

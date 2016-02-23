@@ -55,7 +55,7 @@ gem 'devise'
 gem 'simple_form'
 
 # app server
-gem 'puma'
+gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -70,7 +70,12 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
 
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-passenger', '>= 0.1.1'
+  gem 'capistrano-rvm'
   gem 'capistrano-rails'
+
   gem 'web-console', '~> 2.0'
   gem 'quiet_assets'
   gem 'capistrano3-puma'

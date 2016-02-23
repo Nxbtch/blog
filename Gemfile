@@ -55,7 +55,7 @@ gem 'devise'
 gem 'simple_form'
 
 # app server
-gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
+gem "passenger"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

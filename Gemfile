@@ -65,6 +65,7 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'binding_of_caller'
 end
 
 group :development do
@@ -78,7 +79,6 @@ group :development do
 
   gem 'web-console', '~> 2.0'
   gem 'quiet_assets'
-  gem 'capistrano3-puma'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'

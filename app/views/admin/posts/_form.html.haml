@@ -1,7 +1,7 @@
 =simple_form_for [:admin, @post], remote: true do |f|
   =f.input :post_title
 
-  =f.text_area :post_markdown, class: 'codemirror-editor'
+  =f.text_area :post_markdown, id: "editor"
 
   =f.input :post_date, as: :date
 

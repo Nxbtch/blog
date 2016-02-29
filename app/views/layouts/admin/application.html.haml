@@ -5,7 +5,7 @@
   =javascript_include_tag "admin/application", 'data-turbolinks-track' => true
   =csrf_meta_tag
 
-%body
+%body{data: { action_name: action_name,  controller_name: controller_name }}
   .container-fluid
     #wrapper
       #sidebar-wrapper

@@ -16,6 +16,14 @@ class Admin::PostsController < Admin::ApplicationController
   def edit
   end
 
+  def preview
+    @body = params[:post_markdown]
+
+    respond_to do |format|
+      format.json
+    end
+  end
+
   def create
     @post = ::Posts::CreateService.new(post_params).execute
 

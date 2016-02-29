@@ -8,7 +8,7 @@
 
   %body
     - if user_signed_in?
-      =link_to 'dashboard', admin_root_path
+      =link_to 'dashboard', admin_root_path, data: { turbolinks: false }
     .container
       =yield
 

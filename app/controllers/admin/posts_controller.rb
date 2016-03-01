@@ -17,7 +17,7 @@ class Admin::PostsController < Admin::ApplicationController
   end
 
   def preview
-    @body = params[:post_markdown]
+    @body = params[:body]
 
     respond_to do |format|
       format.json

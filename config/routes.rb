@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root 'welcome#index'
-    resources :posts
+    resources :posts do
+      collection do
+        post :preview
+      end
+    end
   end
 end

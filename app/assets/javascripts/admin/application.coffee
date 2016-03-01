@@ -37,7 +37,7 @@ AppView = Backbone.View.extend
     $("[data-dismiss='alert']").alert()
 
   initPlugins: ()->
-    new EditorView($("#editor")) if $("#editor").length > 0
+    window._editor = new EditorView($("#editor")) if $("#editor").length > 0
 
 $(document).on 'turbolinks:load', ->
   window._appView = new AppView()

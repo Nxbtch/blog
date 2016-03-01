@@ -1,10 +1,15 @@
 =simple_form_for [:admin, @post], remote: true do |f|
   =f.input :post_title
 
-  =f.text_area :post_markdown, id: "editor"
+  %button.btn.btn-info.preview preview
+
+  %hr
+
+  =f.text_area :post_markdown, id: 'editor'
+
 
   =f.input :post_date, as: :date
 
-  =f.input :post_status, collection: ['publish', 'draft', 'lock'], include_blank: false
+  =f.input :post_status, collection: ['publish', 'draft'], include_blank: false
 
   =f.button :submit

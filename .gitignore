@@ -9,6 +9,8 @@
 *.swp
 shared/
 
+qfile/
+
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep

@@ -1,3 +1,9 @@
+PATH
+  remote: qfile
+  specs:
+    qfile (0.1.0)
+      rails (>= 5.0.0.beta3, < 5.1)
+
 GEM
   remote: https://ruby.taobao.org/
   specs:
@@ -296,6 +302,7 @@ DEPENDENCIES
   pg
   pry-byebug
   pry-rails
+  qfile!
   quiet_assets
   rails (= 5.0.0.beta3)
   redcarpet

@@ -12,11 +12,10 @@
         %ul.sidebar-nav
           %li.sidebar-brand
             =link_to 'back to site', root_path
-          %li
-            =link_to 'Posts', admin_posts_path
+          %li=link_to 'overview', admin_root_path
+          %li=link_to 'Posts', admin_posts_path
           - if user_signed_in?
-            %li
-              =link_to 'Logout', destroy_user_session_path, method: :delete
+            %li=link_to 'Logout', destroy_user_session_path, method: :delete
 
 
       #page-content-wrapper

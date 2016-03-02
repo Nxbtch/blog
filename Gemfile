@@ -72,6 +72,8 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
 
+  gem 'qfile', path: 'qfile'
+
   gem 'capistrano'
   gem 'capistrano-bundler'
   gem 'capistrano-passenger', '>= 0.1.1'

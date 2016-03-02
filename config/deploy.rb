@@ -2,7 +2,7 @@
 lock '3.4.0'
 
 set :application, 'app'
-set :repo_url, 'git@gitcafe.com:hechen0/app.git'
+set :repo_url, 'git@git.coding.net:hechen0/app.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

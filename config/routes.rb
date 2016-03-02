@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :posts, only: [:show]
 
   namespace :admin do
-    root 'welcome#index'
+    root 'welcome#index', as: :root
     resources :posts do
       collection do
         post :preview

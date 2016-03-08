@@ -5,4 +5,8 @@
 
 %h2 edit post
 
+%hr
+=link_to 'Delete', admin_post_path(@post), remote: true, method: :delete, data: { confirm: 'Sure?', turbolinks: false }, class: 'btn btn-danger btn-xs'
+%hr
+
 =render 'form'

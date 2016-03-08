@@ -43,6 +43,7 @@ class Admin::PostsController < Admin::ApplicationController
   end
 
   def destroy
+    @post.destroy
   end
 
   private

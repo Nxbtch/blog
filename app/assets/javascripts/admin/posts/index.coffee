@@ -2,7 +2,7 @@ window.PostsIndexView = Backbone.View.extend
   el: "body"
 
   initialize: ->
-    console.log "hehe"
+    return if $('.bootstrap-table').length != 0
     table = $('table.posts')
     table.bootstrapTable
       serach: true
@@ -12,24 +12,21 @@ window.PostsIndexView = Backbone.View.extend
       columns: [
         field: 'id'
         title: 'ID'
+        sortable: true
       ,
         field: 'post_title'
         title: 'Title'
+        formatter: @_operateFormatter
       ,
         field: 'post_status'
         title: 'status'
-      ,
-        field: 'comment_count'
-        title: 'Comments'
-      ,
-        title: 'Operation'
-        formatter: @_operateFormatter
+        sortable: true
       ]
 
   _operateFormatter: (value, row, idx)->
     [
       '<a href="/admin/posts/'+row.id+'/edit">',
-      'edit',
+      value || "No Title",
       '</a>'
     ].join('')
 

@@ -4,9 +4,20 @@ class Admin::PostsController < Admin::ApplicationController
   def index
     limit = params[:limit] || Settings.pagination.admin_posts
     offset = params[:offset] || 0
-    order = params[:order] || :asc
-    order_column = params[:sort] || :id
-    @posts = Post.order("#{order_column} #{order}").limit(limit).offset(offset)
+
+    @posts = Post.all
+
+    if params[:order]
+      order = params[:order] || :asc
+      order_column = params[:sort] || :id
+      @posts = Post.order("#{order_column} #{order}")
+    end
+
+    if params[:search]
+      @posts = @posts.where("post_title like '%#{params[:search]}%'")
+    end
+
+    @posts = @posts.limit(limit).offset(offset)
   end
 
   def new

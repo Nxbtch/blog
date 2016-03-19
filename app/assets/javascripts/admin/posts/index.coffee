@@ -5,7 +5,8 @@ window.PostsIndexView = Backbone.View.extend
     return if $('.bootstrap-table').length != 0
     table = $('table.posts')
     table.bootstrapTable
-      serach: true
+      search: true
+      searchOnEnterKey: true
       url: '/admin/posts.json'
       sidePagination: 'server'
       pagination: true

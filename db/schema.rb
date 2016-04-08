@@ -56,15 +56,6 @@ ActiveRecord::Schema.define(version: 20160408123407) do
     t.text     "post_markdown"
   end
 
-  create_table "qfile_documents", force: :cascade do |t|
-    t.string   "path"
-    t.integer  "date"
-    t.integer  "size"
-    t.string   "doc_type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "login"
     t.string   "nickname",               default: "", null: false

@@ -4,7 +4,7 @@ window.PostsIndexView = Backbone.View.extend
   initialize: ->
     return if $('.bootstrap-table').length != 0
     table = $('table.posts')
-    table.bootstrapTable
+    options = Utils.index_table_options
       url: '/admin/posts.json'
       columns: [
         field: 'id'
@@ -19,6 +19,8 @@ window.PostsIndexView = Backbone.View.extend
         title: 'status'
         sortable: true
       ]
+
+    table.bootstrapTable options
 
   _operateFormatter: (value, row, idx)->
     [

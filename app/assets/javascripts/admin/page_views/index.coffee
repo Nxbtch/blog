@@ -14,7 +14,10 @@ window.PageViewsIndexView = Backbone.View.extend
         field: 'ip',
         title: 'IP'
       ,
-        field: 'UA',
+        field: 'path',
+        title: 'path'
+      ,
+        field: 'user_agent',
         title: 'User Agent'
       ]
 

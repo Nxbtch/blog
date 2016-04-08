@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users, path: 'admin'
   root 'welcome#index'
+
+  post 'page_view' => 'page_view#create'
   resources :posts, only: [:show]
 
   namespace :admin do

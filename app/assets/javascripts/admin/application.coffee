@@ -20,8 +20,10 @@
 AppView = Backbone.View.extend
   el: "body"
 
-  capitalize: (string)->
-    string.charAt(0).toUpperCase() + string.substring(1).toLowerCase()
+# convert underscore style to camelize
+  camelize: (string)->
+    split = string.split('_')
+    (char.charAt(0).toUpperCase() + char.substring(1) for char in split).join('')
 
   initialize: ->
     @initPlugins()
@@ -29,7 +31,7 @@ AppView = Backbone.View.extend
     # initialize corespond view
     controller_name = $("body").data("controller-name")
     action_name = $("body").data("action-name")
-    name = @capitalize(controller_name) + @capitalize(action_name) + "View"
+    name = @camelize(controller_name) + @camelize(action_name) + "View"
     view = window[name]
 
     new view() if view

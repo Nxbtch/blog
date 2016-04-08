@@ -2,7 +2,7 @@ class Admin::PostsController < Admin::ApplicationController
   before_action :find_post, only: [:edit, :update, :destroy]
 
   def index
-    TableFilterService.new(Post, params, {search_fields: [:post_title]}).execute
+    @posts = TableFilterService.new(Post, params, {search_fields: [:post_title]}).execute
   end
 
   def new

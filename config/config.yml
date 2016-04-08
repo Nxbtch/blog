@@ -1,7 +1,8 @@
 development: &default
     admin_email: me@hechen0.com
     pagination:
-        admin_posts: 10
+        admin_table: 10 # pagination for bootstrap tables
+        post: 15 # pagination for posts
 
 production:
     <<: *default

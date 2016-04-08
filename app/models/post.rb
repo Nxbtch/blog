@@ -1,6 +1,6 @@
 require 'markdown'
 class Post < ApplicationRecord
-  paginates_per Settings.pagination.admin_posts
+  paginates_per Settings.pagination.post
 
   scope :published, -> { where(post_status: :publish) }
 

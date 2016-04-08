@@ -2,22 +2,7 @@ class Admin::PostsController < Admin::ApplicationController
   before_action :find_post, only: [:edit, :update, :destroy]
 
   def index
-    limit = params[:limit] || Settings.pagination.admin_posts
-    offset = params[:offset] || 0
-
-    @posts = Post.all
-
-    if params[:order]
-      order = params[:order] || :asc
-      order_column = params[:sort] || :id
-      @posts = Post.order("#{order_column} #{order}")
-    end
-
-    if params[:search]
-      @posts = @posts.where("post_title like '%#{params[:search]}%'")
-    end
-
-    @posts = @posts.limit(limit).offset(offset)
+    TableFilterService.new(Post, params, {search_fields: [:post_title]}).execute
   end
 
   def new

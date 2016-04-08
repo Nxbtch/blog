@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160216143801) do
+ActiveRecord::Schema.define(version: 20160408123407) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,14 @@ ActiveRecord::Schema.define(version: 20160216143801) do
     t.datetime "updated_at",                                     null: false
   end
 
+  create_table "page_views", force: :cascade do |t|
+    t.string   "ip"
+    t.string   "user_agent"
+    t.string   "path"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.integer  "post_author",                default: 0
     t.datetime "post_date"
@@ -46,6 +54,15 @@ ActiveRecord::Schema.define(version: 20160216143801) do
     t.datetime "created_at",                                     null: false
     t.datetime "updated_at",                                     null: false
     t.text     "post_markdown"
+  end
+
+  create_table "qfile_documents", force: :cascade do |t|
+    t.string   "path"
+    t.integer  "date"
+    t.integer  "size"
+    t.string   "doc_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

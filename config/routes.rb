@@ -10,5 +10,6 @@ Rails.application.routes.draw do
         post :preview
       end
     end
+    resources :page_views, only: [:index, :destroy]
   end
 end

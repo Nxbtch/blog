@@ -19,6 +19,9 @@ window.PageViewsIndexView = Backbone.View.extend
       ,
         field: 'user_agent',
         title: 'User Agent'
+      ,
+        field: 'created_at',
+        title: 'Created At'
       ]
 
     table.bootstrapTable options

@@ -13,6 +13,7 @@
 #
 #= require bootstrap-table/src/bootstrap-table
 #= require bootstrap-table/src/locale/bootstrap-table-zh-CN
+#= require ua-parser
 #
 #= require_tree .
 #= require_self

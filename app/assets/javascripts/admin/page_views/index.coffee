@@ -18,10 +18,16 @@ window.PageViewsIndexView = Backbone.View.extend
         title: 'path'
       ,
         field: 'user_agent',
-        title: 'User Agent'
+        title: 'User Agent',
+        formatter: @user_agent_formatter
       ,
         field: 'created_at',
         title: 'Created At'
       ]
 
     table.bootstrapTable options
+
+  user_agent_formatter: (value, row)->
+    parser = new UAParser(value)
+    result = parser.getResult()
+    [result.browser.name, result.os.name].join(' ')

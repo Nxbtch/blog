@@ -30,4 +30,9 @@ window.PageViewsIndexView = Backbone.View.extend
   user_agent_formatter: (value, row)->
     parser = new UAParser(value)
     result = parser.getResult()
-    [result.browser.name, result.os.name].join(' ')
+    [
+      result.browser.name,
+      result.os.name,
+      result.os.version,
+      result.cpu.architecture
+    ].join(' ')

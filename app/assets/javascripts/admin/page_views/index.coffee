@@ -32,6 +32,7 @@ window.PageViewsIndexView = Backbone.View.extend
     result = parser.getResult()
     [
       result.browser.name,
+      result.browser.version,
       result.os.name,
       result.os.version,
       result.cpu.architecture

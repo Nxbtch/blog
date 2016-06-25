@@ -14,4 +14,8 @@ class Post < ApplicationRecord
     return unless self.post_markdown_changed?
     self.post_content = MarkdownConverter.parse(self.post_markdown)
   end
+
+  def draft?
+    post_status == "draft"
+  end
 end

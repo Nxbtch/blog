@@ -6,6 +6,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    raise ActionController::RoutingError.new('Not Found') if @post.draft?
   end
 
 end

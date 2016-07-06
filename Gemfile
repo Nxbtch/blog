@@ -5,6 +5,9 @@ ruby '2.3.0'
 gem 'rails', '5.0.0.beta3'
 # Use postgresql as the database for Active Record
 gem 'pg'
+
+gem 'sidekiq'
+
 # Use SCSS for stylesheets
 gem 'sass-rails'
 gem 'bootstrap-sass'

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   post 'page_view' => 'page_view#create'
-  resources :posts, only: [:show]
+  resources :posts, only: [:show, :create]
 
   namespace :admin do
     root 'welcome#index', as: :root

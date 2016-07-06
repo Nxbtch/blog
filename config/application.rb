@@ -9,6 +9,7 @@ Bundler.require(*Rails.groups)
 module App
   class Application < Rails::Application
     config.time_zone = 'Beijing'
+    config.active_job.queue_adapter = :sidekiq
   end
 end
 

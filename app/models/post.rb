@@ -8,6 +8,10 @@ class Post < ApplicationRecord
 
   before_validation :convert_markdown
 
+  def draft?
+    post_status == "draft"
+  end
+
   private
 
   def convert_markdown
@@ -15,7 +19,4 @@ class Post < ApplicationRecord
     self.post_content = MarkdownConverter.parse(self.post_markdown)
   end
 
-  def draft?
-    post_status == "draft"
-  end
 end

@@ -1,3 +1,7 @@
 %p#notice= notice
 
+- if @post.origin.present?
+  %h4
+    =link_to '原文链接', @post.origin, target: '_blank'
+
 !=@post.post_content

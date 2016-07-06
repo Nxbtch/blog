@@ -68,6 +68,9 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
+    capistrano-sidekiq (0.5.4)
+      capistrano
+      sidekiq (>= 3.4)
     codemirror-rails (5.11)
       railties (>= 3.0, < 5)
     coderay (1.1.1)
@@ -288,6 +291,7 @@ DEPENDENCIES
   capistrano-passenger (>= 0.1.1)
   capistrano-rails
   capistrano-rvm
+  capistrano-sidekiq
   codemirror-rails
   coffee-rails
   devise (~> 4.0.0.rc1)

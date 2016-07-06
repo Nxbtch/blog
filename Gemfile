@@ -79,6 +79,7 @@ group :development do
   gem 'capistrano-passenger', '>= 0.1.1'
   gem 'capistrano-rvm'
   gem 'capistrano-rails'
+  gem 'capistrano-sidekiq'
 
   gem 'web-console', '~> 2.0'
   gem 'quiet_assets'

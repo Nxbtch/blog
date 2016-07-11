@@ -2,7 +2,7 @@ require 'markdown'
 class Post < ApplicationRecord
   paginates_per Settings.pagination.post
 
-  scope :published, -> { where(post_status: :publish) }
+  scope :published, -> { where(post_status: :publish, origin: nil) }
 
   has_many :comments, dependent: :destroy
 

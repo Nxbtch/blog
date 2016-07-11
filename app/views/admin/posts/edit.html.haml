@@ -5,6 +5,9 @@
 
 %h2 edit post
 
+- if @post.origin.present?
+  =link_to '原文', @post.origin, target: '_blank'
+
 %hr
 =link_to 'Delete', admin_post_path(@post), remote: true, method: :delete, data: { confirm: 'Sure?', turbolinks: false }, class: 'btn btn-danger btn-xs'
 %hr

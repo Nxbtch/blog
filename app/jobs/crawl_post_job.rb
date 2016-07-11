@@ -9,7 +9,6 @@ class CrawlPostJob < ActiveJob::Base
     crawler = Crawler.new post.origin
 
     post.post_title = crawler.title
-    post.post_content = crawler.text
     post.post_author  = :bot
     post.post_date = DateTime.now
 

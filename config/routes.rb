@@ -13,5 +13,6 @@ Rails.application.routes.draw do
       end
     end
     resources :page_views, only: [:index, :destroy]
+    get 'urls' , to: 'welcome#urls'
   end
 end

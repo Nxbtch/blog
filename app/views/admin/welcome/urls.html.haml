@@ -1,0 +1,5 @@
+%ol
+  -@posts.each do |post|
+    %li
+      =link_to post.post_title, post.origin, target: '_blank'
+      =post.created_at.to_s(:long)

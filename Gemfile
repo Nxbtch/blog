@@ -2,7 +2,7 @@ source 'https://ruby.taobao.org'
 
 ruby '2.3.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.0.0.beta3'
+gem 'rails', '~> 5.0.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
@@ -21,7 +21,7 @@ gem 'coffee-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks', '~> 5.0.0.beta'
+gem 'turbolinks', '~> 5.0.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -53,7 +53,7 @@ gem 'useragents', require: false
 gem 'redcarpet'
 
 # authentication
-gem 'devise', '~>4.0.0.rc1'
+gem 'devise', '~>4.2'
 
 # simpleform
 gem 'simple_form'
@@ -82,8 +82,6 @@ group :development do
   gem 'capistrano-sidekiq'
 
   gem 'web-console', '~> 2.0'
-  gem 'quiet_assets'
-
   gem 'listen', '~> 3.0.5'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring

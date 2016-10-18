@@ -1,5 +1,7 @@
 %p#notice= notice
 
+=link_to '返回', root_path
+
 - if @post.origin.present?
   %h4
     =link_to '原文链接', @post.origin, target: '_blank'

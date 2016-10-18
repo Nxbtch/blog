@@ -1,9 +1,5 @@
 -@posts.each do |post|
   -cache post do
     %h3= link_to post.post_title, post_path(post)
-    %p
-      != post.post_content.try(:first, 100)
-    = link_to 'more...', post_path(post)
-
 
 =paginate @posts

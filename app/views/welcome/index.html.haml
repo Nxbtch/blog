@@ -9,6 +9,6 @@
         %td &nbsp;&nbsp;&nbsp;&nbsp;
         %td
           %h3
-            %span{style: 'font-size: 12px;'}= post.created_at.strftime('%Y-%m')
+            %span{style: 'font-size: 12px;'}= post.post_date.strftime('%Y-%m')
 
 =paginate @posts

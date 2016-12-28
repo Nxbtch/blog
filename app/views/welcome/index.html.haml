@@ -1,5 +1,14 @@
--@posts.each do |post|
-  -cache post do
-    %h3= link_to post.post_title, post_path(post)
+%h2  何晨的博客
+
+%table
+  -@posts.each do |post|
+    %tr
+      -cache post do
+        %td
+          %h3= link_to post.post_title, post_path(post)
+        %td &nbsp;&nbsp;&nbsp;&nbsp;
+        %td
+          %h3
+            %span{style: 'font-size: 12px;'}= post.created_at.strftime('%Y-%m')
 
 =paginate @posts

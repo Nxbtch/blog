@@ -1,6 +1,4 @@
 # config valid only for current version of Capistrano
-lock '3.5.0'
-
 set :application, 'app'
 set :repo_url, 'git@git.coding.net:hechen0/app.git'
 

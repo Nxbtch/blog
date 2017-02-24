@@ -252,6 +252,8 @@ GEM
     simple_form (3.4.0)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
+    skylight (1.0.0)
+      activesupport (>= 3.0.0)
     slop (3.6.0)
     spring (2.0.1)
       activesupport (>= 4.2)
@@ -328,6 +330,7 @@ DEPENDENCIES
   settingslogic
   sidekiq
   simple_form
+  skylight
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5.0.0)

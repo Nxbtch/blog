@@ -1,5 +1,9 @@
 development: &default
     admin_email: me@hechen0.com
+    upyun_host: v0.api.upyun.com
+    upyun_prefix: blog_assets # namespace in upyun
+    upyun_bucket: hechen0
+
     pagination:
         admin_table: 10 # pagination for bootstrap tables
         post: 15 # pagination for posts

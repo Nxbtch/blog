@@ -1,0 +1,6 @@
+- form = Upyun.form
+=form_tag "http://" + Settings.upyun_host+"/#{Settings.upyun_bucket}", multipart: true do
+  =hidden_field_tag :authorization, form[:authorization]
+  =hidden_field_tag :policy, form[:policy]
+  =file_field_tag :file
+  =submit_tag 'hello'

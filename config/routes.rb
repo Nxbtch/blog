@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :assets
+  end
   devise_for :users, path: 'admin'
   root 'welcome#index'
 
@@ -13,6 +16,8 @@ Rails.application.routes.draw do
       end
     end
     resources :page_views, only: [:index, :destroy]
+  
     get 'urls' , to: 'welcome#urls'
   end
+
 end

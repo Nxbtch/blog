@@ -15,6 +15,7 @@
           %li=link_to 'overview', admin_root_path
           %li=link_to 'Posts', admin_posts_path
           %li=link_to 'Page View', admin_page_views_path
+          %li=link_to 'Assets', admin_assets_path
           %li=link_to 'urls', admin_urls_path
           - if user_signed_in?
             %li=link_to 'Logout', destroy_user_session_path, method: :delete

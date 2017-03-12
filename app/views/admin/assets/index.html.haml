@@ -1,0 +1,23 @@
+%h1 Listing admin_assets
+
+%table
+  %thead
+    %tr
+      %th Path
+      %th Name
+      %th
+      %th
+      %th
+
+  %tbody
+    - @assets.each do |asset|
+      %tr
+        %td= asset.path
+        %td= asset.name
+        %td= link_to 'Show', asset
+        %td= link_to 'Edit', edit_admin_asset_path(asset)
+        %td= link_to 'Destroy', asset, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Asset', new_admin_asset_path

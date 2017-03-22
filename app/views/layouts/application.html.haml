@@ -1,14 +1,15 @@
 !!! 5
 %html
   %head
-    %title App
+    %title 何晨的叨逼叨
     =stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     =javascript_include_tag 'application', 'data-turbolinks-track' => true
+
     =csrf_meta_tags
 
   %body
     - if user_signed_in?
       =link_to 'dashboard', admin_root_path, data: { turbolinks: false }
-    .container
+    .page-content
       =yield
 

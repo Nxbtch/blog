@@ -1,9 +1,15 @@
-%p#notice= notice
+%article.post
+  %header.post-header
+    %span.back
+      &larr;
+      =link_to "目录", root_url
+  %h1.post-title=@post.post_title
+  %p.post-meta
+    %time=@post.post_date.strftime('%m-%d %Y')
 
-=link_to '返回', root_path
-
-- if @post.origin.present?
-  %h4
-    =link_to '原文链接', @post.origin, target: '_blank'
-
-!=@post.post_content
+  .post-content
+    !=@post.post_content
+    %p
+      [
+      %a{href: "#top"} 回到顶部
+      ]

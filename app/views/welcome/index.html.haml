@@ -1,14 +1,16 @@
-%h2  何晨的博客
+.home
+  %section.site-header
+    %h1.smallcap
+      %a.site-title{href: "/"} 何晨的叨逼叨
 
-%table
-  -@posts.each do |post|
-    %tr
-      -cache post do
-        %td
-          %h3= link_to post.post_title, post_path(post)
-        %td &nbsp;&nbsp;&nbsp;&nbsp;
-        %td
-          %h3
-            %span{style: 'font-size: 12px;'}= post.post_date.strftime('%Y-%m')
+    %h5
+      你好，感谢来看我的叨逼叨，我的邮箱是
+      %code me#hechen0.com
+      欢迎来信撕
 
-=paginate @posts
+  %section
+    %ul.post-list
+      -@posts.each do |post|
+        %li
+          =link_to post.post_title, post_path(post)
+          %time= post.post_date.strftime('%m-%d %Y')

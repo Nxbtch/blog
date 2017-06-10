@@ -160,9 +160,6 @@ GEM
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
-    passenger (5.1.2)
-      rack
-      rake (>= 0.8.1)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -318,7 +315,6 @@ DEPENDENCIES
   kaminari
   listen (~> 3.0.5)
   mysql2
-  passenger
   pry-byebug
   pry-rails
   rails (~> 5.0.0)
@@ -340,4 +336,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.14.5
+   1.14.6

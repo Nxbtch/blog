@@ -20,8 +20,6 @@ set :deploy_to, '/home/h/app'
 # Default value for :pty is false
 # set :pty, true
 
-set :passenger_in_gemfile, true
-
 # Default value for :linked_files is []
 set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml', 'Passengerfile.json')
 
@@ -31,7 +29,9 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 # set ruby version
 set :rvm_ruby_version, '2.3.0'
 
-set :rvm_map_bins, fetch(:rvm_map_bins, []).push('passenger', 'passenger-config')
+#set :rvm_map_bins, fetch(:rvm_map_bins, []).push('passenger', 'passenger-config')
+
+set :passenger_restart_with_touch, false
 
 
 # Default value for default_env is {}
@@ -39,15 +39,15 @@ set :rvm_map_bins, fetch(:rvm_map_bins, []).push('passenger', 'passenger-config'
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
-namespace :deploy do
-
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
-    end
-  end
-
-end
+#namespace :deploy do
+#
+#  after :restart, :clear_cache do
+#    on roles(:web), in: :groups, limit: 3, wait: 10 do
+#      # Here we can do anything such as:
+#      # within release_path do
+#      #   execute :rake, 'cache:clear'
+#      # end
+#    end
+#  end
+#
+#end

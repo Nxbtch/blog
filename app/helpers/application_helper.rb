@@ -15,4 +15,12 @@ module ApplicationHelper
     GOOGLE
   end
 
+  def gen_title(post=nil)
+    if post
+      "#{post.post_title} - #{Settings.site_title}"
+    else
+      Settings.site_title
+    end
+  end
+
 end
